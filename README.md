@@ -19,6 +19,7 @@ h. Menggunakan akses database/file
 
 UPDATE
 Terkait Tugas Besar , Spesifikasi : 
+
 (a) Mahasiswa Dibebaskan Membuat Produk apapun (game / applikasi / web) menggunakan platform/bahasa apapun  yang wajib menggunakan paradigma OOP (NoteS: Untuk kelas yang saya ajar kita sudah sepakat menggunakan java).
 
 (b) Berkelompok , 1 kelompok 2-3 orang. OOP salah satunya diciptakan untuk kolaborasi. Kolaborasi adalah wajib dalam tugas besar. (Notes jika ada yang lebih dari 4 orang, seharusnya bisa dibagi menjadi 2 kelompok @2 orang) 
