@@ -40,9 +40,14 @@ Terkait Tugas Besar , Spesifikasi :
 
 
  MILESTONE
+ 
 (a) Pengumpulan draft (narasi, use case, class diagram) paling lambat 13-Nov-2021
-(b) Perubahan atau revisi dari rancangan dilaksanakan paralel dengan implementasi   
-(c) Setiap anggota membuat video yang berisikan presentasi dari masing-masing package yang dibuat dan diberikan linknya untuk bisa diakses.
+
+(b) Perubahan atau revisi dari rancangan dilaksanakan paralel dengan implementasi  
+
+(c) Setiap anggota membuat video yang berisikan presentasi dari masing-masing package yang dibuat dan diberikan linknya untuk bisa diakses
+
 (d) Setiap kelompok membuat video yang berisikan prsentasi dari sistem lengkap dan mendemonstrasikan main function dari sistem (uses case dari system)
+
 NOTES Pengumpulan video dilakukan pada minggu ke 14, paling lambat hari sabtu minggu ke 14
 
