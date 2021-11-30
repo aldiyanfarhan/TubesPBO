@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 
 /**
  *
  * @author Aldiyan Farhan N
  */
-public class Driver {
-    public static void main(String[] args) {
-        new ControllerBuku();
-        new ControllerMember();
-        new ControllerPetugas();
+public class Petugas extends Member {
+    
+    public Petugas(String id, String nama, String alamat, String notelp) {
+        super(id, nama, alamat, notelp);
     }
+    
 }

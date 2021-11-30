@@ -9,10 +9,6 @@ package Controller;
  *
  * @author Aldiyan Farhan N
  */
-public class Driver {
-    public static void main(String[] args) {
-        new ControllerBuku();
-        new ControllerMember();
-        new ControllerPetugas();
-    }
+public class ControllerMember {
+    
 }
