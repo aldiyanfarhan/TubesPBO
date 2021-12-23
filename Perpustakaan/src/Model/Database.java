@@ -75,6 +75,8 @@ public class Database {
         }
         disconnect();
     }
+    
+
 
     public ArrayList<Buku> getBuku() {
         buku.clear();
@@ -169,9 +171,28 @@ public class Database {
         }
         disconnect();
     }
-
+    
+//                                      MEMBER SECTION
+    
     public ArrayList<Member> getMember() {
         member.clear();
+        loadMember();
         return member;
     }
+    
+    public void loadMember(){
+        connect();
+        String query = "SELECT id_member,nama FROM member";
+        try {
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                member.add(new Member(rs.getString("id_member"),rs.getString("nama")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+        
+
 }

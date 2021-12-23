@@ -16,17 +16,18 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Aldiyan Farhan N
  */
-public class ControllerBuku extends MouseAdapter implements ActionListener {
+public class ControllerPerpustakaan extends MouseAdapter implements ActionListener {
     private Perpustakaan view;
     private Database db;
 
-    public ControllerBuku() {
+    public ControllerPerpustakaan() {
         view = new Perpustakaan();
         db = new Database();
         view.addActionListener(this);
         view.addMouseAdapter(this);
         view.setVisible(true);
         loadTable();
+        loadTableMember();
     }
     
     public void loadTable(){
@@ -59,9 +60,11 @@ public class ControllerBuku extends MouseAdapter implements ActionListener {
         } else if (source.equals(view.getBtnStatus())) {
             btnStatusActionPerformed();
             loadTable();
-        } else if (source.equals(view.getBtnCari())){
+        } else if (source.equals(view.getBtnCariBuku())){
             btnCariActionPerformed();
-        } 
+        } else if (source.equals(view.getBtnCariMember())){
+            btnCariMemberActionPerformed();
+        }
     }
     
     public void btnTambahActionPerformed(){
@@ -121,6 +124,8 @@ public class ControllerBuku extends MouseAdapter implements ActionListener {
             }
         view.setTbBuku(model);
     }    
+    
+
     
 //    public void btnCariActionPerformed(){
 //        String cari = view.getjDaftarkodebuku();
@@ -192,4 +197,25 @@ public class ControllerBuku extends MouseAdapter implements ActionListener {
             view.setjHarga(Harga);
         }
     }
+    
+        public void loadTableMember(){
+        DefaultTableModel modelm = new DefaultTableModel(new String[]{"ID Member", "Nama"}, 0);
+        ArrayList<Member> member = db.getMember();
+        for (Member m : member) {
+            modelm.addRow(new Object[]{m.getidMember(), m.getNama()});
+        }
+        view.setTbMember(modelm);
+    }
+        
+    public void btnCariMemberActionPerformed(){
+        String cari = view.getjDaftarIdMember();
+        DefaultTableModel modelm = new DefaultTableModel(new String[]{"ID Member", "Nama"}, 0);
+        ArrayList<Member> member = db.getMember();
+            for (Member m : member) {
+                if (m.getidMember().contains(cari) || m.getNama().contains(cari)){
+                    modelm.addRow(new Object[]{m.getidMember(), m.getNama()});
+                }
+            }
+        view.setTbMember(modelm);
+    }    
 }

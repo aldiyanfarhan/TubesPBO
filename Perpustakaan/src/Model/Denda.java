@@ -18,4 +18,6 @@ public class Denda {
     public int getDenda() {
         return denda;
     } 
+    
+    
 }

@@ -10,49 +10,50 @@ package Model;
  * @author Aldiyan Farhan N
  */
 public class Member {
-    private String id;
+
+    private String id_member;
+    private String email;
     private String nama;
     private String alamat;
     private String notelp;
-    
-    
-    public Member(String id, String nama, String alamat, String notelp) {
-        this.id = id;
-        this.nama = nama;
-        this.alamat = alamat;
-        this.notelp = notelp;
-    }
-    
-    public void setId(String id) {
-        this.id = id;
-    }
-    public String getIdMember() {
-        return id;
-    }
-    
-    public void getNamaMember(String nama) {
+
+    public Member(String id_member, String nama) {
+        this.id_member = id_member;
         this.nama = nama;
     }
+
+    public void setidMember(String id_member) {
+        this.id_member = id_member;
+    }
+    public String getidMember() {
+        return id_member;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setNama(String nama) {
+        this.nama = nama;
+    }    
     public String getNama() {
         return nama;
     }
     
-    public void setAlamatMember(String alamat) {
+    public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
-    public String getAlamatMember() {
+    public String getAlamat() {
         return alamat;
-    }    
-    
-    public void setNotelpMember(String notelp) {
+    }
+
+    public void setnoTelp(String notelp) {
         this.notelp = notelp;
     }
-    public String getNotelpMember() {
+    public String getnoTelp() {
         return notelp;
-    }    
-
-    public Object getNamaMember() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    }   
 }
