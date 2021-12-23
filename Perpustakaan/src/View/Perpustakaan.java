@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -61,13 +61,11 @@ public class Perpustakaan extends javax.swing.JFrame {
         jKkodebuku = new javax.swing.JTextField();
         btnStatus = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jPkodeBuku = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jKkodeMember = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jPkodeMember = new javax.swing.JTextField();
+        jKEmailMember = new javax.swing.JTextField();
+        jPEmailMember = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jDaftarkodebuku = new javax.swing.JTextField();
@@ -83,6 +81,7 @@ public class Perpustakaan extends javax.swing.JFrame {
         jMcari = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         jLabel8.setText("jLabel8");
 
@@ -238,9 +237,7 @@ public class Perpustakaan extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("Kondisi");
-
-        jLabel16.setText("ID Member");
+        jLabel16.setText("Email");
 
         jPkodeBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,18 +245,11 @@ public class Perpustakaan extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setText("ID Member");
+        jLabel18.setText("Email");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Baik", "Rusak" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jPEmailMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        jPkodeMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPkodeMemberActionPerformed(evt);
+                jPEmailMemberActionPerformed(evt);
             }
         });
 
@@ -293,12 +283,12 @@ public class Perpustakaan extends javax.swing.JFrame {
                                 .addComponent(jPkodeBuku))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(jKkodeMember))
+                        .addComponent(jKEmailMember))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, 0, 115, Short.MAX_VALUE))
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPEmailMember))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -307,12 +297,7 @@ public class Perpustakaan extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel18)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPkodeMember)))
+                        .addGap(0, 68, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -323,7 +308,7 @@ public class Perpustakaan extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jPkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPEmailMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPkodeBuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -334,19 +319,15 @@ public class Perpustakaan extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jKkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jKEmailMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jKkodebuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
                 .addComponent(btnStatus)
                 .addContainerGap())
         );
@@ -419,7 +400,7 @@ public class Perpustakaan extends javax.swing.JFrame {
 
         jLabel17.setText("Member");
 
-        jLabel19.setText("ID Member");
+        jLabel19.setText("Email");
 
         jMkodeMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -434,10 +415,12 @@ public class Perpustakaan extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Kode Buku", "Tanggal Pinjam", "Denda"
+                "Kode Buku", "Tanggal Pinjam", "Tanggal Kembali", "Denda"
             }
         ));
         jScrollPane4.setViewportView(jTable1);
+
+        jButton1.setText("Register");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -446,33 +429,41 @@ public class Perpustakaan extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(jLabel19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jMkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jMcari)
-                            .addComponent(jLabel17))
-                        .addGap(0, 111, Short.MAX_VALUE))
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel17))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel19)
+                        .addGap(28, 28, 28)
+                        .addComponent(jMkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jMcari)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addContainerGap(42, Short.MAX_VALUE))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addComponent(jLabel17)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jMkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19)
-                    .addComponent(jMkodeMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jMcari)
-                .addGap(51, 51, 51)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                    .addComponent(jMcari))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(11, 11, 11)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -492,7 +483,7 @@ public class Perpustakaan extends javax.swing.JFrame {
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -544,17 +535,13 @@ public class Perpustakaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPenerbitActionPerformed
 
-    private void jPkodeMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPkodeMemberActionPerformed
+    private void jPEmailMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPEmailMemberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPkodeMemberActionPerformed
+    }//GEN-LAST:event_jPEmailMemberActionPerformed
 
     private void jMkodeMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMkodeMemberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMkodeMemberActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jPkodeBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPkodeBukuActionPerformed
         // TODO add your handling code here:
@@ -570,11 +557,11 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JButton btnStatus;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JTextField jDaftarkodebuku;
     private javax.swing.JTextField jHarga;
     private javax.swing.JTextField jJudul;
-    private javax.swing.JTextField jKkodeMember;
+    private javax.swing.JTextField jKEmailMember;
     private javax.swing.JTextField jKkodebuku;
     private javax.swing.JTextField jKodeBuku;
     private javax.swing.JLabel jLabel1;
@@ -583,7 +570,6 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -598,13 +584,13 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jMcari;
     private javax.swing.JTextField jMkodeMember;
+    private javax.swing.JTextField jPEmailMember;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jPenerbit;
     private javax.swing.JTextField jPkodeBuku;
-    private javax.swing.JTextField jPkodeMember;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;

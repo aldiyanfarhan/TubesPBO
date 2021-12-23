@@ -18,8 +18,9 @@ public class Database {
     private Statement stmt;
     private ResultSet rs;
     private Connection conn;
-    
+    private ArrayList<Member> member = new ArrayList<>();
     private ArrayList<Buku> buku = new ArrayList<>();
+   
     
     public Database(){
         loadBuku();
@@ -167,5 +168,10 @@ public class Database {
             }
         }
         disconnect();
+    }
+
+    public ArrayList<Member> getMember() {
+        member.clear();
+        return member;
     }
 }

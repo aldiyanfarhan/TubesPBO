@@ -14,7 +14,7 @@ public class Member {
     private String nama;
     private String alamat;
     private String notelp;
-    private int denda;
+    
     
     public Member(String id, String nama, String alamat, String notelp) {
         this.id = id;
@@ -26,36 +26,33 @@ public class Member {
     public void setId(String id) {
         this.id = id;
     }
-    public String getId() {
+    public String getIdMember() {
         return id;
     }
     
-    public void setNama(String nama) {
+    public void getNamaMember(String nama) {
         this.nama = nama;
     }
     public String getNama() {
         return nama;
     }
     
-    public void setAlamat(String alamat) {
+    public void setAlamatMember(String alamat) {
         this.alamat = alamat;
     }
-    public String getAlamat() {
+    public String getAlamatMember() {
         return alamat;
     }    
     
-    public void setNotelp(String notelp) {
+    public void setNotelpMember(String notelp) {
         this.notelp = notelp;
     }
-    public String getNotelp() {
+    public String getNotelpMember() {
         return notelp;
     }    
 
-    public void setDenda(int denda) {
-        this.denda = denda;
+    public Object getNamaMember() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    public int getDenda() {
-        return denda;
-    } 
-    
+
 }
