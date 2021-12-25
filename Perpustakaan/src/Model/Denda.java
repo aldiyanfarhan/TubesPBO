@@ -9,8 +9,12 @@ package Model;
  *
  * @author Aldiyan Farhan N
  */
-public class Denda {
+public class Denda extends Peminjaman{
     private int denda;
+
+    public Denda(String kodeBuku, String judul, String penerbit, int harga, String status) {
+        super(kodeBuku, judul, penerbit, harga, status);
+    }
     
     public void setDenda(int denda) {
         this.denda = denda;

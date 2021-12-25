@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JButton;
+
 
 /**
  *
@@ -275,4 +277,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton1;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
+
+    
+    
 }
