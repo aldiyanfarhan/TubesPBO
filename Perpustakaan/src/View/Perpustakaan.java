@@ -731,7 +731,6 @@ public class Perpustakaan extends javax.swing.JFrame {
         return btnCariMember;
     }
     
-
     public JButton getBtnDelete() {
         return btnDelete;
     }
