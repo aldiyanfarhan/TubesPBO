@@ -9,17 +9,16 @@ package Model;
  *
  * @author Aldiyan Farhan N
  */
-public class Peminjaman{
-
+public class Pengembalian {
     private String id_member;
     private String kodebuku;
-    private String tanggal_pinjam;
+    private String tanggal_kembali;
     private String status; 
     
-    public Peminjaman(String id_member, String kodebuku, String tanggal_pinjam) {
+    public Pengembalian(String id_member, String kodebuku, String tanggal_kembali) {
         this.id_member = id_member;
         this.kodebuku = kodebuku;
-        this.tanggal_pinjam = tanggal_pinjam;
+        this.tanggal_kembali = tanggal_kembali;
     }
     
     public void setid_member(String id_member) {
@@ -43,12 +42,10 @@ public class Peminjaman{
         return status;
     }     
     
-    public void settanggal_pinjam(String tanggal_pinjam) {
-        this.tanggal_pinjam = tanggal_pinjam;
+    public void settanggal_kembali(String tanggal_kembali) {
+        this.tanggal_kembali = tanggal_kembali;
     }
-    public String gettanggal_pinjam() {
-        return tanggal_pinjam;
-    }    
-
-    
+    public String gettanggal_kembali() {
+        return tanggal_kembali;
+    }   
 }

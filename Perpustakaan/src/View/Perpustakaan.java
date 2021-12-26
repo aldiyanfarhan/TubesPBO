@@ -64,10 +64,14 @@ public class Perpustakaan extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPkodeBuku = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jKEmailMember = new javax.swing.JTextField();
-        jPEmailMember = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        jKidmember = new javax.swing.JTextField();
+        jPidmember = new javax.swing.JTextField();
+        jTanggalPinjam = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jTanggalKembali = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jDaftarkodebuku = new javax.swing.JTextField();
@@ -245,7 +249,7 @@ public class Perpustakaan extends javax.swing.JFrame {
             }
         });
 
-        jLabel16.setText("ID");
+        jLabel16.setText("ID Member");
 
         jPkodeBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,81 +257,109 @@ public class Perpustakaan extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setText("ID");
+        jLabel18.setText("ID Member");
 
-        jPEmailMember.addActionListener(new java.awt.event.ActionListener() {
+        jKidmember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPEmailMemberActionPerformed(evt);
+                jKidmemberActionPerformed(evt);
             }
         });
+
+        jPidmember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPidmemberActionPerformed(evt);
+            }
+        });
+
+        jTanggalPinjam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTanggalPinjamActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Tanggal");
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel22.setText("YYYY-MM-DD");
+
+        jLabel23.setText("Tanggal");
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel24.setText("YYYY-MM-DD");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnStatus)
+                .addGap(58, 58, 58))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnPinjam)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPkodeBuku)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                            .addComponent(jKkodebuku)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(jLabel6)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(jPEmailMember))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jSeparator2)
                         .addGap(11, 11, 11))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel18)
-                        .addGap(54, 54, 54)
+                        .addGap(16, 16, 16)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 48, Short.MAX_VALUE))
+                            .addComponent(jKidmember)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jKEmailMember)))))
+                                .addComponent(jLabel6)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPidmember)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel21))
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPkodeBuku)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnPinjam)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jTanggalPinjam)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jKkodebuku)
+                            .addComponent(jTanggalKembali))))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnStatus)
-                .addGap(58, 58, 58))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(jLabel6)
-                .addGap(11, 11, 11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jPEmailMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPidmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPkodeBuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(10, 10, 10)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTanggalPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22)
+                .addGap(3, 3, 3)
                 .addComponent(btnPinjam)
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -335,15 +367,19 @@ public class Perpustakaan extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jKEmailMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jKidmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jKkodebuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jTanggalKembali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel24)
+                .addGap(1, 1, 1)
                 .addComponent(btnStatus)
                 .addGap(7, 7, 7))
         );
@@ -621,9 +657,9 @@ public class Perpustakaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPenerbitActionPerformed
 
-    private void jPEmailMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPEmailMemberActionPerformed
+    private void jPidmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPidmemberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPEmailMemberActionPerformed
+    }//GEN-LAST:event_jPidmemberActionPerformed
 
     private void jMkodeMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMkodeMemberActionPerformed
         // TODO add your handling code here:
@@ -636,6 +672,14 @@ public class Perpustakaan extends javax.swing.JFrame {
     private void jRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRegisterActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRegisterActionPerformed
+
+    private void jKidmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jKidmemberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jKidmemberActionPerformed
+
+    private void jTanggalPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTanggalPinjamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTanggalPinjamActionPerformed
 
     
 
@@ -650,11 +694,9 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JTextField jDaftarIdMember;
     private javax.swing.JTextField jDaftarkodebuku;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JTextField jHarga;
     private javax.swing.JTextField jJudul;
-    private javax.swing.JTextField jKEmailMember;
+    private javax.swing.JTextField jKidmember;
     private javax.swing.JTextField jKkodebuku;
     private javax.swing.JTextField jKodeBuku;
     private javax.swing.JLabel jLabel1;
@@ -670,6 +712,10 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -679,13 +725,13 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jMcari;
     private javax.swing.JTextField jMkodeMember;
-    private javax.swing.JTextField jPEmailMember;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField jPenerbit;
+    private javax.swing.JTextField jPidmember;
     private javax.swing.JTextField jPkodeBuku;
     private javax.swing.JButton jRegister;
     private javax.swing.JScrollPane jScrollPane1;
@@ -695,6 +741,8 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTanggalKembali;
+    private javax.swing.JTextField jTanggalPinjam;
     private javax.swing.JTable jtbBuku;
     private javax.swing.JTable jtbMember;
     // End of variables declaration//GEN-END:variables
@@ -718,14 +766,31 @@ public class Perpustakaan extends javax.swing.JFrame {
     public void setjKodeBuku(String kodeBuku) {
         jKodeBuku.setText(kodeBuku);
     }
-
+    
+    public void setPidmember(String id_member) {
+        jPidmember.setText(id_member);
+    }    
+    public String getPidmember() {
+        return jPidmember.getText();
+    }
+    public String getKidmember() {
+        return jKidmember.getText();
+    }    
+    
+    public String getpTanggalPinjam() {
+        return jTanggalPinjam.getText();
+    }
+    public String getpTanggalKembali() {
+        return jTanggalKembali.getText();
+    }   
+    
     public void setjPenerbit(String penerbit) {
         jPenerbit.setText(penerbit);
     }
     
     public JButton getBtnCariBuku() {
         return btnCari;
-    }
+    } 
     
     public JButton getBtnCariMember() {
         return btnCariMember;
