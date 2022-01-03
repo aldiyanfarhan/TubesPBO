@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package Controller;
 
+import Model.Buku;
+import Model.Member;
+import Model.Peminjaman;
+import Model.Pengembalian;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.util.ArrayList;
@@ -18,8 +22,10 @@ public class Database {
     private Statement stmt;
     private ResultSet rs;
     private Connection conn;
-    
+    private ArrayList<Member> member = new ArrayList<>();
     private ArrayList<Buku> buku = new ArrayList<>();
+    private ArrayList<Peminjaman> peminjaman = new ArrayList<>();
+    private ArrayList<Pengembalian> pengembalian = new ArrayList<>();
     
     public Database(){
         loadBuku();
@@ -74,6 +80,8 @@ public class Database {
         }
         disconnect();
     }
+    
+
 
     public ArrayList<Buku> getBuku() {
         buku.clear();
@@ -89,11 +97,35 @@ public class Database {
         query += "'" + b.getPenerbit() + "',";
         query += "'" + b.getHarga() + "',";
         query += "'" + b.getStatus() + "')";
-        
         if (manipulate(query)) buku.add(b);
         disconnect();
     }
     
+    public void addPinjamBuku(Peminjaman b){
+        connect();
+        String query = "INSERT INTO peminjaman(kodeBuku,id_member,tanggal_pinjam,status) VALUES (";
+        query += "'" + b.getkodebuku()+ "',";
+        query += "'" + b.getid_member() + "',";
+        query += "'" + b.gettanggal_pinjam() + "',";
+        query += 1 + ")";
+        if (manipulate(query)) peminjaman.add(b);
+        disconnect();
+    }    
+    
+    public void updatepinjamBuku(String kode,String id_member, String tanggal_kembali){
+        connect();
+        String query = "UPDATE peminjaman SET tanggal_kembali="+tanggal_kembali+", status=0 WHERE kodeBuku='"+ kode +"' "
+                + "and id_member='"+ id_member +"' and status=1 ;";
+        if (manipulate(query)) {
+            for (Pengembalian kembali : pengembalian) {
+                if (kembali.getkodebuku().equals(kode)) {
+                    kembali.setstatus("0");
+                }
+            }
+        }
+        disconnect();
+    }   
+
     public boolean cekDuplikatKodeBuku(String kodeBuku){
         boolean cek = false;
         for (Buku b : buku) {
@@ -168,4 +200,27 @@ public class Database {
         }
         disconnect();
     }
+    
+//                                      MEMBER SECTION
+    
+    public ArrayList<Member> getMember() {
+        member.clear();
+        loadMember();
+        return member;
+    }
+    
+    public void loadMember(){
+        connect();
+        String query = "SELECT id_member,nama FROM member";
+        try {
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                member.add(new Member(rs.getString("id_member"),rs.getString("nama")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+        
 }

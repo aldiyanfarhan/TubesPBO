@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 
 /**
  *
  * @author Aldiyan Farhan N
  */
-public class Driver {
-    public static void main(String[] args) {
-        new ControllerPerpustakaan();
+public class Denda{
+    private int denda;
+    
+    public void setDenda(int denda) {
+        this.denda = denda;
     }
+    public int getDenda() {
+        return denda;
+    } 
+    
+    
 }
