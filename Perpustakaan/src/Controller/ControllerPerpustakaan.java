@@ -54,6 +54,9 @@ public class ControllerPerpustakaan extends MouseAdapter implements ActionListen
             loadTable();
         }else if (source.equals(view.getBtnCariBuku())){
             btnCariActionPerformed();
+        }
+        else if (source.equals(view.getBtnRefresh())){
+            loadTable();
         } 
     }
     

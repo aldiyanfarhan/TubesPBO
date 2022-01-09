@@ -16,7 +16,7 @@ public class Peminjaman{
     private String tanggal_pinjam;
     private String status; 
     
-    public Peminjaman(String id_member, String kodebuku, String tanggal_pinjam) {
+    public Peminjaman(String kodebuku,String id_member, String tanggal_pinjam) {
         this.id_member = id_member;
         this.kodebuku = kodebuku;
         this.tanggal_pinjam = tanggal_pinjam;

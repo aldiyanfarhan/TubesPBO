@@ -59,6 +59,7 @@ public class Perpustakaan extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtbBuku = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
+        jRefresh = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
         jLabel8.setText("jLabel8");
@@ -216,6 +217,8 @@ public class Perpustakaan extends javax.swing.JFrame {
 
         jLabel9.setText("DAFTAR BUKU");
 
+        jRefresh.setText("Refresh");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -223,7 +226,9 @@ public class Perpustakaan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 750, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jRefresh)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 651, Short.MAX_VALUE)
                 .addComponent(jLabel12)
                 .addGap(8, 8, 8)
                 .addComponent(jDaftarkodebuku, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,7 +245,8 @@ public class Perpustakaan extends javax.swing.JFrame {
                     .addComponent(jDaftarkodebuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCari)
                     .addComponent(jLabel12)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRefresh))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
         );
@@ -263,7 +269,7 @@ public class Perpustakaan extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,6 +331,7 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jPenerbit;
+    private javax.swing.JButton jRefresh;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
@@ -370,8 +377,9 @@ public class Perpustakaan extends javax.swing.JFrame {
         return btnReset;
     }
 
-
-
+    public JButton getBtnRefresh() {
+        return jRefresh;
+    }
     public JButton getBtnTambah() {
         return btnTambah;
     }

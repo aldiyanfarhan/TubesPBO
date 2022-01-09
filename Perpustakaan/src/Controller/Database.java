@@ -103,19 +103,18 @@ public class Database {
     
     public void addPinjamBuku(Peminjaman b){
         connect();
-        String query = "INSERT INTO peminjaman(kodeBuku,id_member,tanggal_pinjam,tanggal_kembali,status) VALUES (";
+        String query = "INSERT INTO peminjaman(kodeBuku,id_member,tanggal_pinjam,status) VALUES (";
         query += "'" + b.getkodebuku()+ "',";
         query += "'" + b.getid_member() + "',";
         query += "'" + b.gettanggal_pinjam() + "',";
-        query += "' NULL ',";
         query += 1 + ")";
         if (manipulate(query)) peminjaman.add(b);
         disconnect();
-    }    
+    }       
     
     public void updatepinjamBuku(String kode,String id_member, String tanggal_kembali){
         connect();
-        String query = "UPDATE peminjaman SET tanggal_kembali="+tanggal_kembali+", status=0 WHERE kodeBuku='"+ kode +"' "
+        String query = "UPDATE peminjaman SET tanggal_kembali='"+tanggal_kembali+"', status=0 WHERE kodeBuku='"+ kode +"' "
                 + "and id_member='"+ id_member +"' and status=1 ;";
         if (manipulate(query)) {
             for (Pengembalian kembali : pengembalian) {

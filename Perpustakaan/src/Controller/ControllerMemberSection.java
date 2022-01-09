@@ -34,6 +34,12 @@ public class ControllerMemberSection extends MouseAdapter implements ActionListe
         if (source.equals(view.getBtnCariMember())){
             btnCariMemberActionPerformed();
         }
+        else if (source.equals(view.getBtnPinjam())){
+            btnPinjamActionPerformed();
+        }
+        else if (source.equals(view.getBtnStatus())){
+            btnStatusActionPerformed();
+        }
     }
     
 
