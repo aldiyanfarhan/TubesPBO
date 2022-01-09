@@ -9,39 +9,30 @@ package Model;
  *
  * @author Aldiyan Farhan N
  */
-public class Peminjaman{
+public class Peminjaman extends Buku{
 
     private String id_member;
-    private String kodebuku;
+    private String nama;
     private String tanggal_pinjam;
-    private String status; 
+    private String tanggal_kembali; 
     
-    public Peminjaman(String id_member, String kodebuku, String tanggal_pinjam) {
-        this.id_member = id_member;
-        this.kodebuku = kodebuku;
-        this.tanggal_pinjam = tanggal_pinjam;
+    public Peminjaman(String kodeBuku, String judul, String penerbit, int harga, String status) {
+        super(kodeBuku, judul, penerbit, harga, status);
     }
-    
+
     public void setid_member(String id_member) {
         this.id_member = id_member;
     }
     public String getid_member() {
         return id_member;
-    }       
+    }    
     
-    public void setkodebuku(String kodebuku) {
-        this.kodebuku = kodebuku;
+    public void setnama(String nama) {
+        this.nama = nama;
     }
-    public String getkodebuku() {
-        return kodebuku;
-    }     
-    
-    public void setstatus(String status) {
-        this.status = status;
-    }
-    public String getstatus() {
-        return status;
-    }     
+    public String getnama() {
+        return nama;
+    }    
     
     public void settanggal_pinjam(String tanggal_pinjam) {
         this.tanggal_pinjam = tanggal_pinjam;
@@ -49,6 +40,13 @@ public class Peminjaman{
     public String gettanggal_pinjam() {
         return tanggal_pinjam;
     }    
+    
+    public void settanggal_kembali(String tanggal_kembali) {
+        this.tanggal_kembali = tanggal_kembali;
+    }
+    public String gettanggal_kembali() {
+        return tanggal_kembali;
+    }
 
     
 }

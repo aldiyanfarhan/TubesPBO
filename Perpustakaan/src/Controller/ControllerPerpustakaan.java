@@ -66,8 +66,6 @@ public class ControllerPerpustakaan extends MouseAdapter implements ActionListen
         }
     }
     
- 
-    
     public void btnTambahActionPerformed(){
         String kodeBuku = view.getjKodeBuku();
         String Judul = view.getjJudul();
@@ -162,29 +160,22 @@ public class ControllerPerpustakaan extends MouseAdapter implements ActionListen
 //        view.setTbBuku(model);
 //    }
     
-
     public void btnPinjamActionPerformed(){
         String kode = view.getjPkodeBuku();
-        String id = view.getPidmember();
-        String tanggal = view.getpTanggalPinjam();
         if (kode.isEmpty()) {
             view.showMessage("Data Kosong", "Error", 0);
         }else{
             db.pinjamBuku(kode);
-            db.addPinjamBuku(new Peminjaman(kode,id,tanggal));
             view.showMessage("Status Buku berhasil diubah", "Success", 1);
         }
-    }   
+    }
     
     public void btnStatusActionPerformed(){
         String kode = view.getjKkodebuku();
-        String id = view.getKidmember();
-        String tanggal = view.getpTanggalKembali();
         if (kode.isEmpty()) {
             view.showMessage("Data kosong", "error", 0);
         }else {
             db.bukuKembali(kode);
-            db.updatepinjamBuku(kode,id,tanggal);
             view.showMessage("Data berhasil diubah", "success", 1);
         }
     }
