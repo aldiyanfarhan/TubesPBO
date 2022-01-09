@@ -103,10 +103,11 @@ public class Database {
     
     public void addPinjamBuku(Peminjaman b){
         connect();
-        String query = "INSERT INTO peminjaman(kodeBuku,id_member,tanggal_pinjam,status) VALUES (";
+        String query = "INSERT INTO peminjaman(kodeBuku,id_member,tanggal_pinjam,tanggal_kembali,status) VALUES (";
         query += "'" + b.getkodebuku()+ "',";
         query += "'" + b.getid_member() + "',";
         query += "'" + b.gettanggal_pinjam() + "',";
+        query += "' NULL ',";
         query += 1 + ")";
         if (manipulate(query)) peminjaman.add(b);
         disconnect();
