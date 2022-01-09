@@ -110,11 +110,11 @@ public class Database {
         query += 1 + ")";
         if (manipulate(query)) peminjaman.add(b);
         disconnect();
-    }    
+    }       
     
     public void updatepinjamBuku(String kode,String id_member, String tanggal_kembali){
         connect();
-        String query = "UPDATE peminjaman SET tanggal_kembali="+tanggal_kembali+", status=0 WHERE kodeBuku='"+ kode +"' "
+        String query = "UPDATE peminjaman SET tanggal_kembali='"+tanggal_kembali+"', status=0 WHERE kodeBuku='"+ kode +"' "
                 + "and id_member='"+ id_member +"' and status=1 ;";
         if (manipulate(query)) {
             for (Pengembalian kembali : pengembalian) {

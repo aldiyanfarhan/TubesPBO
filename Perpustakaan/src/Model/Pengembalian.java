@@ -15,7 +15,7 @@ public class Pengembalian {
     private String tanggal_kembali;
     private String status; 
     
-    public Pengembalian(String id_member, String kodebuku, String tanggal_kembali) {
+    public Pengembalian(String kodebuku, String id_member, String tanggal_kembali) {
         this.id_member = id_member;
         this.kodebuku = kodebuku;
         this.tanggal_kembali = tanggal_kembali;
