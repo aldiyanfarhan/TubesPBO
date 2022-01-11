@@ -137,6 +137,11 @@ public class Database {
         return cek;
     }
     
+    public boolean cekDuplikatPeminjaman(String Peminjaman){
+           
+        return false;
+    }
+    
     public void delBuku(String kode){
         connect();
         String query = "DELETE FROM buku WHERE kodeBuku='"+ kode+"';";

@@ -68,6 +68,8 @@ public class MemberSection extends javax.swing.JFrame {
         jDaftarIdMember = new javax.swing.JTextField();
         btnCariMember = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jBackPerpustakaan = new javax.swing.JButton();
+        jBackMember = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -373,6 +375,20 @@ public class MemberSection extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("Member Section");
 
+        jBackPerpustakaan.setText("Kembali");
+        jBackPerpustakaan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBackPerpustakaanActionPerformed(evt);
+            }
+        });
+
+        jBackMember.setText("Kembali");
+        jBackMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBackMemberActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -388,22 +404,36 @@ public class MemberSection extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(420, 420, 420)
+                        .addGap(26, 26, 26)
+                        .addComponent(jBackMember)
+                        .addGap(321, 321, 321)
                         .addComponent(jLabel13)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(502, 502, 502)
+                    .addComponent(jBackPerpustakaan)
+                    .addContainerGap(503, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel13)
-                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jBackMember))
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(329, 329, 329)
+                    .addComponent(jBackPerpustakaan)
+                    .addContainerGap(329, Short.MAX_VALUE)))
         );
 
         pack();
@@ -445,6 +475,18 @@ public class MemberSection extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRegisterActionPerformed
 
+    private void jBackPerpustakaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackPerpustakaanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBackPerpustakaanActionPerformed
+
+    private void jBackMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackMemberActionPerformed
+        // TODO add your handling code here:
+        MainMenu M = new MainMenu();
+        M.setVisible(true);
+        M.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jBackMemberActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -484,6 +526,8 @@ public class MemberSection extends javax.swing.JFrame {
     private javax.swing.JButton btnCariMember;
     private javax.swing.JButton btnPinjam;
     private javax.swing.JButton btnStatus;
+    private javax.swing.JButton jBackMember;
+    private javax.swing.JButton jBackPerpustakaan;
     private javax.swing.JTextField jDaftarIdMember;
     private javax.swing.JTextField jKidmember;
     private javax.swing.JTextField jKkodebuku;

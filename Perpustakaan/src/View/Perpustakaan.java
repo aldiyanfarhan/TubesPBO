@@ -61,6 +61,7 @@ public class Perpustakaan extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jRefresh = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jBackPerpustakaan = new javax.swing.JButton();
 
         jLabel8.setText("jLabel8");
 
@@ -254,6 +255,13 @@ public class Perpustakaan extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("PERPUSTAKAAN PBO");
 
+        jBackPerpustakaan.setText("Kembali");
+        jBackPerpustakaan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBackPerpustakaanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -261,7 +269,9 @@ public class Perpustakaan extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(526, 526, 526)
+                        .addGap(45, 45, 45)
+                        .addComponent(jBackPerpustakaan)
+                        .addGap(408, 408, 408)
                         .addComponent(jLabel13))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(399, 399, 399)
@@ -274,8 +284,13 @@ public class Perpustakaan extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBackPerpustakaan)))
                 .addGap(33, 33, 33)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
@@ -306,6 +321,14 @@ public class Perpustakaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPenerbitActionPerformed
 
+    private void jBackPerpustakaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackPerpustakaanActionPerformed
+        // TODO add your handling code here:
+        MainMenu M = new MainMenu();
+        M.setVisible(true);
+        M.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_jBackPerpustakaanActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -314,6 +337,7 @@ public class Perpustakaan extends javax.swing.JFrame {
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton jBackPerpustakaan;
     private javax.swing.JTextField jDaftarkodebuku;
     private javax.swing.JTextField jHarga;
     private javax.swing.JTextField jJudul;

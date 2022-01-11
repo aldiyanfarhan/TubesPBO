@@ -9,7 +9,7 @@ package Model;
  *
  * @author Aldiyan Farhan N
  */
-public class Member {
+public class Member extends Register{
 
     private String id_member;
     private String email;
