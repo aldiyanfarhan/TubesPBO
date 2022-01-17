@@ -9,7 +9,7 @@ package Model;
  *
  * @author Aldiyan Farhan N
  */
-public class Denda {
+public class Denda{
     private int denda;
     
     public void setDenda(int denda) {
@@ -18,4 +18,6 @@ public class Denda {
     public int getDenda() {
         return denda;
     } 
+    
+    
 }

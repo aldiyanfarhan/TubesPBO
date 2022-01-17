@@ -5,14 +5,37 @@
  */
 package Model;
 
+
+
 /**
  *
  * @author Aldiyan Farhan N
  */
-public class Petugas extends Member {
+public class Petugas extends Register{
+    String Username;
+    String Password;
+    int id;
     
-    public Petugas(String id, String nama, String alamat, String notelp) {
-        super(id, nama, alamat, notelp);
+    public Petugas (int id, String Username, String Password) {
+        this.id = id;
+        this.Username = Username;
+        this.Password = Password;
     }
-    
+
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }  
 }
