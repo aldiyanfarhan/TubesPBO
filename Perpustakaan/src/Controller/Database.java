@@ -162,6 +162,7 @@ public class Database {
         query += " kodeBuku='" + b.getKodeBuku() + "',";
         query += " Judul='" + b.getJudul() + "',";
         query += " Penerbit='" + b.getPenerbit() + "',";
+        query += " Harga='" + b.getHarga() + "',";
         query += "Status='Available'";
         query += " WHERE kodeBuku='" + b.getKodeBuku() + "';";
         if (manipulate(query)) {
